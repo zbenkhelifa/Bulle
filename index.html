@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mission Bulle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grandstander:wght@700;800&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Mission <span>Bulle</span></h1>
+      <p class="tag">Un jeu de plateforme illustré sur les réseaux sociaux · SNT, thème Réseaux sociaux</p>
+    </div>
+    <div class="hudtop">
+      <div class="herochip sticker" id="herochip" hidden></div>
+      <div class="score sticker" aria-live="polite">Score <b id="score">0</b></div>
+    </div>
+  </header>
+
+  <section id="game" hidden aria-label="Zone de jeu">
+    <div class="hudbar sticker">
+      <span class="hearts" id="hearts"></span>
+      <span class="lvl" id="lvlname"></span>
+      <span class="status" id="status"></span>
+      <span class="sp"></span>
+      <button class="mini" id="pauseBtn" type="button">Pause</button>
+      <button class="mini" id="fsBtn" type="button">Plein écran</button>
+    </div>
+    <div class="screen" id="screen"><canvas id="cv"></canvas></div>
+    <p class="toast" id="toast" aria-live="polite"></p>
+    <div class="touch" id="touch">
+      <div class="pad">
+        <button type="button" data-k="left" aria-label="Gauche">◀</button>
+        <button type="button" data-k="right" aria-label="Droite">▶</button>
+      </div>
+      <button type="button" class="tjump" data-k="jump">Saut</button>
+    </div>
+    <p class="keys">Clavier : <kbd>←</kbd> <kbd>→</kbd> ou <kbd>Q</kbd> <kbd>D</kbd> pour courir · <kbd>Espace</kbd>, <kbd>↑</kbd> ou <kbd>Z</kbd> pour sauter (maintenir = plus haut) · <kbd>P</kbd> pause</p>
+    <p class="rotate">Astuce : tourne ton téléphone à l'horizontale pour mieux voir le niveau.</p>
+  </section>
+
+  <main class="panel sticker" id="panel"></main>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
